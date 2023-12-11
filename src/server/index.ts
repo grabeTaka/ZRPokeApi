@@ -4,6 +4,9 @@ import { join, resolve } from 'path'
 import dotenv from 'dotenv'
 import cors from 'cors'
 
+import swaggerUi from 'swagger-ui-express'
+const swaggerDocument = require('../../swagger.json')
+
 const bodyParser = require('body-parser')
 const { APPLICATION_PORT, APPLICATION_HOST } = process.env
 dotenv.config()
@@ -25,6 +28,7 @@ app.get('/', (req: Request, res: Response) => {
 })
 
 app.use('/api/pokemons', pokemonsRoutes)
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 app.listen(PORT, HOST, () => {
     console.info(`🚀 Server is running on port ${PORT}`)
