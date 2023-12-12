@@ -2,7 +2,7 @@
 
 Technical test for selection process at ZRP. The backend works as a middleware that makes requests to the pokemon listing api.
 
-Node.js, Typescript, Jest, Openapi were used to develop the backend.
+Node.js, Typescript, Jest, Openapi, Docker and Docker Compose were used to develop the backend.
 
 ## Demo
 
