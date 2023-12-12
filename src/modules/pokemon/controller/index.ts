@@ -14,7 +14,9 @@ class PokemonController {
             'pokemon_name',
             true
         )
-        const pokemonService = new PokemonService(POKEMON_API_URL)
+        const pokemonService = new PokemonService(
+            POKEMON_API_URL || 'https://pokeapi.co/api/v2/pokemon'
+        )
 
         const getPokemonUseCase = new GetPokemonUseCase(pokemonService)
         getPokemonUseCase.prepare(pokemonName)
