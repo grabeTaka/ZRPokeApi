@@ -25,7 +25,6 @@ export class GetPokemonUseCase implements getPokemonUsecaseInterface {
         })
 
         const pokemon: pokemonType = {
-            name: result.name,
             abilities,
         }
 

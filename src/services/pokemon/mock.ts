@@ -4,7 +4,6 @@ import { getbyNameResult, pokemonServiceInterface } from './index.d'
 import { pokemonType } from '@/types/pokemon'
 
 export const pokemonMock: pokemonType = {
-    name: 'pikachu',
     abilities: ['thunderbolt', 'thunder'],
 }
 
@@ -27,7 +26,7 @@ const pokemonResultMock: getbyNameResult = {
 }
 
 const getPokemonMock = (name: string): getbyNameResult | null => {
-    if (name === pokemonMock.name) return pokemonResultMock
+    if (name === pokemonResultMock.name) return pokemonResultMock
     else return null
 }
 

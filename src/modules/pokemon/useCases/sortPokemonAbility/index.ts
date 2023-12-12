@@ -10,7 +10,7 @@ export class SortPokemonAbilityUseCase implements sortPokemonAbilityUsecaseInter
     }
 
     execute = (): pokemonType => {
-        this.pokemon.abilities.sort()
+        this.pokemon.abilities.sort((a, b) => (a > b ? 1 : -1))
         return this.pokemon
     }
 }
