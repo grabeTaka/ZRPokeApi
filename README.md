@@ -2,10 +2,18 @@
 
 Technical test for selection process at ZRP. The backend works as a middleware that makes requests to the pokemon listing api.
 
+Node.js, Typescript, Jest, Openapi were used to develop the backend.
+
 ## Demo
 
 The live demo may take a few minutes if the server is disabled due to inactivity, more details: <a href="https://render.com/docs/free">link</a>
 <h4><a href="https://sp-ui.onrender.com/"> Live Demo API</a></h4>
+
+## .env file
+To make things easier, the .env file will already be included when you clone the project.
+
+Containing only a single environment variable called POKEMON_API_URL
+
 
 ## Installation and initialization with Docker-Compose
 
@@ -30,7 +38,6 @@ To run tests please run follow command:
 ```bash 
   npm run test
 ```
-
 
 ## Documentation
 
