@@ -9,11 +9,7 @@ router
     .get(async (req: Request, res: Response, next: NextFunction) => {
         try {
             const result = await pokemonController.listByName(req, res)
-            res.status(200).json({
-                code: 200,
-                message: 'success',
-                data: result,
-            })
+            res.status(200).json(result)
         } catch (e) {
             res.status(500).json({
                 code: 500,

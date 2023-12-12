@@ -14,6 +14,7 @@ const PORT = +APPLICATION_PORT || 3000
 const HOST = APPLICATION_HOST || '0.0.0.0'
 
 const app = express()
+const docsDir = join(__dirname, '../../docs')
 
 import pokemonsRoutes from '@/modules/pokemon/routes'
 
@@ -25,6 +26,7 @@ app.get('/', (req: Request, res: Response) => {
 })
 
 app.use('/api/pokemons', pokemonsRoutes)
+app.use('/api-docs', express.static(docsDir))
 
 app.listen(PORT, HOST, () => {
     console.info(`🚀 Server is running on port ${PORT}`)

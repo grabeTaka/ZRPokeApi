@@ -11,7 +11,6 @@ export class SortPokemonAbilityUseCase implements sortPokemonAbilityUsecaseInter
 
     execute = (): pokemonType => {
         this.pokemon.abilities.sort()
-
         return this.pokemon
     }
 }
